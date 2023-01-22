@@ -1,4 +1,39 @@
-.sidenav{
+@use "@angular/material" as mat;
+
+$grey-palette: mat.define-palette(mat.$grey-palette);
+$green-palette: mat.define-palette(mat.$green-palette);
+$blue-grey-palette: mat.define-palette(mat.$blue-grey-palette);
+
+.dark-grey-theme {
+  background: mat.get-color-from-palette($grey-palette, 900);
+  color: mat.get-color-from-palette($grey-palette, "900-contrast");
+}
+
+.green{
+  color: mat.get-color-from-palette($green-palette, A200);
+}
+
+.sidenav {
   height: 100%;
   overflow-y: auto;
+  min-width: 100%;
 }
+
+.menu {
+  padding: 20px;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  padding: 3;
+  font-weight: normal;
+}
+
+.icon {
+  margin-right: 5px;
+}
+
+

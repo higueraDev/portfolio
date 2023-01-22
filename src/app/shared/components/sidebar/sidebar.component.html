@@ -1,7 +1,11 @@
 <mat-sidenav-container class="sidenav" hasBackdrop>
-  <mat-sidenav #sidenav mode="over" opened>Menu</mat-sidenav>
-  <mat-sidenav-content>
+  <mat-sidenav #sidenav mode="over" opened class="menu dark-grey-theme">
+    <a class="link"><mat-icon class="icon green">home</mat-icon> Home</a>
+    <a class="link"><mat-icon class="icon green">folder</mat-icon> Projects</a>
+    <a class="link"><mat-icon class="icon green">person_search</mat-icon> About</a>
+    <a class="link"><mat-icon class="icon green">email</mat-icon> Home</a>
+  </mat-sidenav>
+  <mat-sidenav-content class="content">
     <ng-content></ng-content>
   </mat-sidenav-content>
 </mat-sidenav-container>
-
