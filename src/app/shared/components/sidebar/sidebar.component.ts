@@ -9,7 +9,9 @@ import { MatSidenav } from '@angular/material/sidenav';
 export class SidebarComponent {
   @ViewChild('sidenav') sidenav!: MatSidenav;
 
+  public logo: string = './assets/images/higo.png';
+
   toggle() {
-    this.sidenav.toggle()
+    this.sidenav.toggle();
   }
 }

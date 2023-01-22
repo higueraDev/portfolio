@@ -1,11 +1,11 @@
 <mat-sidenav-container class="sidenav" hasBackdrop>
-  <mat-sidenav #sidenav mode="over" opened class="menu dark-grey-theme">
+  <mat-sidenav #sidenav mode="over" opened class="menu bg-grey">
     <a class="link"><mat-icon class="icon green">home</mat-icon> Home</a>
     <a class="link"><mat-icon class="icon green">folder</mat-icon> Projects</a>
     <a class="link"><mat-icon class="icon green">person_search</mat-icon> About</a>
-    <a class="link"><mat-icon class="icon green">email</mat-icon> Home</a>
+    <a class="link" href="mailto:contact@higueradev.com"><mat-icon class="icon green">email</mat-icon> Contact</a>
   </mat-sidenav>
-  <mat-sidenav-content class="content">
+  <mat-sidenav-content classs="content">
     <ng-content></ng-content>
   </mat-sidenav-content>
 </mat-sidenav-container>
