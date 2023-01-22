@@ -33,11 +33,6 @@
   font-weight: normal;
   cursor: pointer;
   position: relative;
-  text-decoration: none;
-
-  &:visited, &:link, &:active, &:focus{
-    color: white;
-  }
 }
 
 .icon {
