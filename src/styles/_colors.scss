@@ -1,0 +1,26 @@
+@use "@angular/material" as mat;
+
+$grey-palette: mat.define-palette(mat.$grey-palette);
+$green-palette: mat.define-palette(mat.$green-palette);
+$purple-palette: mat.define-palette(mat.$purple-palette);
+
+.green{
+  color: mat.get-color-from-palette($green-palette, A200);
+}
+.bg-green{
+  background-color: mat.get-color-from-palette($green-palette, A200);
+}
+
+.grey{
+  color: mat.get-color-from-palette($grey-palette, 900);
+}
+.bg-grey{
+  background-color: mat.get-color-from-palette($grey-palette, 900);
+}
+
+.purple{
+  color: mat.get-color-from-palette($purple-palette, 500);
+}
+.bg-purple{
+  background-color: mat.get-color-from-palette($purple-palette, 500);
+}
