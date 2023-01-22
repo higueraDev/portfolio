@@ -2,7 +2,16 @@
   justify-content: center;
 }
 .text{
-  display: inline-flex;
+  display: flex;
   align-items: center;
+  font-weight: normal;
   font-size: 1rem;
+}
+
+a{
+  display: block;
+}
+
+.separator{
+  margin: 0 5px;
 }
