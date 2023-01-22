@@ -5,13 +5,11 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
-    BrowserAnimationsModule,
     MatCardModule,
     MatIconModule,
     MatButtonModule,
@@ -19,7 +17,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatSidenavModule,
   ],
   exports: [
-    BrowserAnimationsModule,
     MatCardModule,
     MatIconModule,
     MatButtonModule,
