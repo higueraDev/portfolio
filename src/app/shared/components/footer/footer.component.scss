@@ -1,11 +1,14 @@
-.footer{
+.footer-row{
   justify-content: center;
 }
-.text{
-  display: flex;
-  align-items: center;
-  font-weight: normal;
+
+.footer{
   font-size: 1rem;
+  font-weight: normal;
+
+  @media (min-width:1024px) {
+    flex-direction: row;
+  }
 }
 
 a{
