@@ -27,14 +27,44 @@
 .link {
   display: flex;
   align-items: center;
+  width: 100%;
   font-size: 1.2rem;
   margin-bottom: 1rem;
   padding: 3;
+  box-sizing: border-box;
   font-weight: normal;
   cursor: pointer;
   position: relative;
+  padding: 10px;
+  border: none;
+  color: white;
+  background: rgba($color: #000000, $alpha: 0.3);
+  transition: all 0.3s ease;
+  margin-left: auto;
+
+  &:hover{
+    @extend .bg-purple;
+    width: 96%;
+    .icon{
+      color: white;
+    }
+  }
 }
 
 .icon {
   margin-right: 5px;
+
+  &--social{
+    margin-right: 10px;
+  }
+}
+
+.social{
+  display: flex;
+  position: relative;
+  z-index: 1;
+}
+
+.separator{
+  margin-bottom: 20px;
 }

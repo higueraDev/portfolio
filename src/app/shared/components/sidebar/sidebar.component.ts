@@ -9,9 +9,15 @@ import { MatSidenav } from '@angular/material/sidenav';
 export class SidebarComponent {
   @ViewChild('sidenav') sidenav!: MatSidenav;
 
+  public iconColor = 'white'
+
   public logo: string = './assets/images/higo.png';
 
   toggle() {
     this.sidenav.toggle();
+  }
+
+  changeColor(){
+    this.iconColor = '#000000'
   }
 }
