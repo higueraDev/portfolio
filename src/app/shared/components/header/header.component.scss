@@ -1,3 +1,5 @@
+@import '/src/styles/colors';
+
 .title {
   width: 10ch;
   line-height: 1;
@@ -20,7 +22,8 @@
 }
 
 .code-icon {
-  margin-left: 5px;
+  @extend .bg-grey;
+  margin: 0 5px;
 }
 
 .cta-wrap{

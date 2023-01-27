@@ -1,7 +1,7 @@
 <main #main (scroll)="onScroll()" class="container">
   <app-hero (scroll)="scroll()"></app-hero>
-  <app-welcome [class.active]="sectionActive === 1"></app-welcome>
-  <app-introduction [class.active]="sectionActive === 2"></app-introduction>
-  <app-cta [class.active]="sectionActive === 3"></app-cta>
+  <app-welcome [class.active]="sectionActive > 0.9 && sectionActive < 1.9"></app-welcome>
+  <app-introduction [class.active]="sectionActive > 1.9 && sectionActive < 2.9"></app-introduction>
+  <app-cta [class.active]="sectionActive > 2.9 && sectionActive < 3.9"></app-cta>
   <app-footer></app-footer>
 </main>
