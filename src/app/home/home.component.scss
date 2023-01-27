@@ -1,12 +1,36 @@
-.card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 320px;
-  margin: auto;
+
+.questions-wrapper {
+  width: 100%;
+  max-width: 800px;
 }
 
-.container {
-  width: 100%;
-  height: 100%;
+.card {
+  position: relative;
+  padding: 20px;
+}
+
+.wrapper {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+
+  &--right{
+    right: 0;
+    transform: translate(50%,-50%);
+  }
+  &--left{
+    left: 0;
+    transform: translate(-50%,-50%);
+  }
+}
+
+.icon{
+  width: auto;
+  height: auto;
+  font-size: 10rem;
+}
+
+
+.section__title--introduction{
+  margin-left: auto;
 }
