@@ -16,21 +16,36 @@
 
   &--right{
     right: 0;
-    transform: translate(50%,-50%);
+    transform: translate(0,-50%);
+    @media (min-width: 1200px) {
+      transform: translate(50%,-50%);
+    }
   }
   &--left{
     left: 0;
-    transform: translate(-50%,-50%);
+    transform: translate(0,-50%);
+    @media (min-width: 1200px) {
+      transform: translate(-50%,-50%);
+    }
   }
 }
 
 .icon{
   width: auto;
   height: auto;
-  font-size: 10rem;
+  font-size: 5rem;
+  @media (min-width: 1200px) {
+    font-size: 10rem;
+  }
 }
 
 
 .section__title--introduction{
   margin-left: auto;
+}
+
+
+.button-wrapper{
+  padding-top: 20px;
+  justify-content: center;
 }
