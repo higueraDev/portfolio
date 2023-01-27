@@ -5,10 +5,7 @@
 .footer{
   font-size: 1rem;
   font-weight: normal;
-
-  @media (min-width:1024px) {
-    flex-direction: row;
-  }
+  justify-content: center;
 }
 
 a{

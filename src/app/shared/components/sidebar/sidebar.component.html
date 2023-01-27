@@ -1,16 +1,20 @@
 <mat-sidenav-container class="sidenav" hasBackdrop>
   <mat-sidenav #sidenav mode="over" class="menu bg-grey">
-    <button class="link"><mat-icon class="icon green">home</mat-icon> Home</button>
-    <button class="link"><mat-icon class="icon green">folder</mat-icon> Projects</button>
-    <button class="link"><mat-icon class="icon green">person_search</mat-icon> About</button>
-    <a class="link" href="mailto:contact@higueradev.com" title="Send a Mail"><mat-icon class="icon green">email</mat-icon> Contact</a>
-    <hr class="separator">
+    <button routerLink="/home" class="link" routerLinkActive="active">
+      <mat-icon class="icon green">home</mat-icon> Home
+    </button>
+    <button routerLink="/projects" class="link" routerLinkActive="active">
+      <mat-icon class="icon green">folder</mat-icon> Projects
+    </button>
+    <button routerLink="/about" class="link" routerLinkActive="active">
+      <mat-icon class="icon green">person_search</mat-icon> About
+    </button>
+    <a class="link" href="mailto:contact@higueradev.com" title="Send a Mail"
+      ><mat-icon class="icon green">email</mat-icon> Contact</a
+    >
+    <hr class="separator" />
     <p>Follow me:</p>
-    <div class="social">
-      <a href="https://github.com/higueraDev" class="icon icon--social" target="_blank" title="github"><app-icon width="30px" name="githubIcon"></app-icon></a>
-      <a href="https://mx.linkedin.com/in/higueradev" class="icon icon--social" target="_blank" title="linkedin"><app-icon width="30px" name="linkedinIcon"></app-icon></a>
-      <a href="https://mobile.twitter.com/higueradev" class="icon icon--social" target="_blank" title="twitter"><app-icon width="30px" name="twitterIcon"></app-icon></a>
-    </div>
+    <app-social></app-social>
   </mat-sidenav>
   <mat-sidenav-content classs="content">
     <ng-content></ng-content>

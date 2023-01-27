@@ -1,12 +1,12 @@
 .title {
   width: 10ch;
   line-height: 1;
-  animation: typing 1s steps(10), blink .5s step-end infinite alternate;
+  animation: typing 1s steps(10), blink 1s steps(1) infinite;
   border-right: 3px solid;
   white-space: nowrap;
   font-family: monospace;
   font-size: 1.2rem;
-  padding: 0 2px;
+  padding:2px;
   overflow: hidden;
 }
 
@@ -24,17 +24,20 @@
 }
 
 .cta-wrap{
+  display: flex;
   margin-left: auto;
 }
 
-@keyframes typing {
-  from {
-    width: 0;
-  }
+.header{
+  position: fixed;
+  z-index: 2;
 }
 
-@keyframes blink {
-  50% {
-    border-color: transparent;
-  }
+.love-icon{
+  animation: pulse 0.5s steps(3) infinite;
+}
+
+.love-wrapper{
+  display: flex;
+  align-items: center;
 }

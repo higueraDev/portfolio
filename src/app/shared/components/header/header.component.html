@@ -1,13 +1,16 @@
-<mat-toolbar color="primary">
+<mat-toolbar color="primary" role="heading" class="header">
   <div class="wrapper">
     <button mat-icon-button (click)="onMenuClick()">
       <mat-icon color="accent">code</mat-icon>
     </button>
     <span class="title">higueraDev</span>
     <div class="cta-wrap">
-      <button mat-icon-button>
-        <mat-icon color="accent">favorite</mat-icon>
-      </button>
+      <div class="love-wrapper">
+        <span>1</span>
+        <button mat-icon-button >
+          <mat-icon color="accent" class="love-icon">favorite</mat-icon>
+        </button>
+      </div>
       <button mat-icon-button>
         <mat-icon color="accent">share</mat-icon>
       </button>

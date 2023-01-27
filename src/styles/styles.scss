@@ -3,7 +3,7 @@
 @import "animations";
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -11,7 +11,8 @@ html,
 body {
   height: 100%;
 }
-body,button {
+body,
+button {
   margin: 0;
   font-family: "Roboto Mono", "Helvetica Neue", sans-serif;
 }
@@ -22,16 +23,21 @@ a {
   &:link,
   &:active,
   &:focus {
-    color: white;
+    @extend .green;
   }
 }
 
-p, li{
-  font-size: 1.2rem;
-  line-height: 1.7;
+p,
+li,a,a[mat-raised-button] span.mdc-button__label {
+  font-size: 1rem;
+  line-height: 1.5;
+  @media (min-width: 1200px) {
+    font-size: 1.2rem;
+    line-height: 1.7;
+  }
 }
 
-.section{
+.section {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -39,24 +45,27 @@ p, li{
   scroll-snap-align: center;
   height: 100vh;
   width: 100%;
+  padding: 0 10px;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
-.section--light{
+.section--light {
   background: rgba($color: #000000, $alpha: 0.8);
 }
 
-.section--dark{
+.section--dark {
   @extend .bg-grey;
   position: relative;
 
-  &::before{
-    content:'';
+  &::before {
+    content: "";
     display: block;
     width: 100%;
     height: 100%;
     position: absolute;
     right: 0;
-    bottom:0;
+    bottom: 0;
     opacity: 0.3;
     background-image: url("../assets/images/higo.png");
     background-repeat: no-repeat;
@@ -69,27 +78,33 @@ p, li{
   height: 100vh;
   overflow: auto;
   scroll-snap-type: y mandatory;
-  background-image: url('../assets/images/hero.jpeg');
+  background-image: url("../assets/images/hero.jpeg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
-
-.container__title{
+.container__title {
   text-align: center;
   margin: 20px 0;
   overflow: hidden;
   white-space: nowrap;
   color: white;
-  font-size: 5rem;
+  font-size: 2.5rem;
+
+  @media (min-width: 1200px) {
+    font-size: 5rem;
+  }
 }
 
-.section__title{
-  font-size: 2rem;
+.section__title {
+  font-size: 1.8rem;
+  @media (min-width: 1200px) {
+    font-size: 2rem;
+  }
 }
 
-mat-icon.scroll-icon{
+mat-icon.scroll-icon {
   width: auto;
   height: auto;
   font-size: 4rem;
@@ -97,13 +112,23 @@ mat-icon.scroll-icon{
   animation: pulse 0.5s steps(3) infinite;
 }
 
-.card{
+
+.card {
   transition: all 0.5s ease;
   opacity: 0.1;
 }
 
-.active{
-  .card{
+.active {
+  .card {
     opacity: 1;
+  }
+}
+
+a[mat-raised-button]{
+  min-width: 100%;
+  padding: 25px 0;
+
+  @media (min-width:768px) {
+    min-width: 220px;
   }
 }
