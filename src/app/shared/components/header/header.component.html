@@ -7,7 +7,7 @@
     <div class="cta-wrap">
       <div class="love-wrapper">
         <span>{{likes}}</span>
-        <button (click)="onLike()" mat-icon-button >
+        <button matRipple matRippleColor="rgba(255,255,0,.5)" [matRippleCentered]="true" [matRippleUnbounded]="true" (click)="onLike()" mat-icon-button >
           <mat-icon color="accent" class="love-icon">favorite</mat-icon>
         </button>
       </div>
