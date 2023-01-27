@@ -39,17 +39,6 @@ p, li{
   scroll-snap-align: center;
   height: 100vh;
   width: 100%;
-
-  .card{
-    transition: all 0.5s ease;
-    opacity: 0.1;
-  }
-
-  &.active{
-    .card{
-      opacity: 1;
-    }
-  }
 }
 
 .section--light{
@@ -106,4 +95,15 @@ mat-icon.scroll-icon{
   font-size: 4rem;
   cursor: pointer;
   animation: pulse 0.5s steps(3) infinite;
+}
+
+.card{
+  transition: all 0.5s ease;
+  opacity: 0.1;
+}
+
+.active{
+  .card{
+    opacity: 1;
+  }
 }
