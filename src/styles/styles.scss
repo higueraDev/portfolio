@@ -1,12 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
 @import "colors";
+@import "animations";
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+
+html{
+  scroll-behavior: smooth;
+}
 
 html,
 body {
   height: 100%;
 }
-body {
+body,button {
   margin: 0;
   font-family: "Roboto Mono", "Helvetica Neue", sans-serif;
 }
@@ -19,4 +24,86 @@ a {
   &:focus {
     color: white;
   }
+}
+
+p, li{
+  font-size: 1.2rem;
+  line-height: 1.7;
+}
+
+.section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: center;
+  height: 100vh;
+  width: 100%;
+
+  .card{
+    transition: all 0.5s ease;
+    opacity: 0.1;
+  }
+
+  &.active{
+    .card{
+      opacity: 1;
+    }
+  }
+}
+
+.section--light{
+  background: rgba($color: #000000, $alpha: 0.8);
+}
+
+.section--dark{
+  @extend .bg-grey;
+  position: relative;
+
+  &::before{
+    content:'';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    bottom:0;
+    opacity: 0.3;
+    background-image: url("../assets/images/higo.png");
+    background-repeat: no-repeat;
+    background-position: left bottom;
+  }
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  scroll-snap-type: y mandatory;
+  background-image: url('../assets/images/hero.jpeg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+
+.container__title{
+  text-align: center;
+  margin: 20px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  color: white;
+  font-size: 5rem;
+}
+
+.section__title{
+  font-size: 2rem;
+}
+
+mat-icon.scroll-icon{
+  width: auto;
+  height: auto;
+  font-size: 4rem;
+  cursor: pointer;
+  animation: pulse 0.5s steps(3) infinite;
 }

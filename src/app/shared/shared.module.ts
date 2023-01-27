@@ -5,10 +5,13 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { MaterialModule } from '../material/material.module';
 import { FooterComponent } from './components/footer/footer.component';
 import { IconComponent } from './components/icon/icon.component';
+import { RouterModule } from '@angular/router';
+import { SocialComponent } from './components/social/social.component';
+import { ImageComponent } from './components/image/image.component';
 
 @NgModule({
-  declarations: [HeaderComponent, SidebarComponent, FooterComponent, IconComponent],
-  imports: [CommonModule, MaterialModule],
-  exports: [HeaderComponent, SidebarComponent, FooterComponent],
+  declarations: [HeaderComponent, SidebarComponent, FooterComponent, IconComponent, SocialComponent, ImageComponent],
+  imports: [CommonModule, MaterialModule, RouterModule],
+  exports: [HeaderComponent, SidebarComponent, FooterComponent,ImageComponent],
 })
 export class SharedModule {}
