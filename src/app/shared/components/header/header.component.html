@@ -6,14 +6,11 @@
     <span class="title">higueraDev</span>
     <div class="cta-wrap">
       <div class="love-wrapper">
-        <span>1</span>
-        <button mat-icon-button >
+        <span>{{likes}}</span>
+        <button (click)="onLike()" mat-icon-button >
           <mat-icon color="accent" class="love-icon">favorite</mat-icon>
         </button>
       </div>
-      <button mat-icon-button>
-        <mat-icon color="accent">share</mat-icon>
-      </button>
     </div>
   </div>
 </mat-toolbar>
