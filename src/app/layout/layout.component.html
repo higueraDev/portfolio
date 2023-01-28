@@ -1,6 +1,6 @@
 <div class="layout">
   <app-header (toggleMenu)="sidenav.toggle()" class="header"></app-header>
   <app-sidebar #sidenav class="sidenav">
-    <router-outlet></router-outlet>
+    <router-outlet (activate)="sidenav.toggle()"></router-outlet>
   </app-sidebar>
 </div>
