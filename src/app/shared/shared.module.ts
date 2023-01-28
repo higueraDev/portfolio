@@ -10,8 +10,21 @@ import { SocialComponent } from './components/social/social.component';
 import { ImageComponent } from './components/image/image.component';
 
 @NgModule({
-  declarations: [HeaderComponent, SidebarComponent, FooterComponent, IconComponent, SocialComponent, ImageComponent],
+  declarations: [
+    HeaderComponent,
+    SidebarComponent,
+    FooterComponent,
+    IconComponent,
+    SocialComponent,
+    ImageComponent,
+  ],
   imports: [CommonModule, MaterialModule, RouterModule],
-  exports: [HeaderComponent, SidebarComponent, FooterComponent,ImageComponent],
+  exports: [
+    HeaderComponent,
+    SidebarComponent,
+    FooterComponent,
+    ImageComponent,
+    IconComponent,
+  ],
 })
 export class SharedModule {}

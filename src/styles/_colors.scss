@@ -15,6 +15,12 @@ $yellow-palette: mat.define-palette(mat.$yellow-palette);
 .grey{
   color: mat.get-color-from-palette($grey-palette, 900);
 }
+.grey-light{
+  color: mat.get-color-from-palette($grey-palette, 800);
+}
+.bg-grey-light{
+  background-color: mat.get-color-from-palette($grey-palette, 800);
+}
 .bg-grey{
   background-color: mat.get-color-from-palette($grey-palette, 900);
 }

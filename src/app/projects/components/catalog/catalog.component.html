@@ -1,0 +1,29 @@
+<section class="section section--dark">
+  <mat-card *ngIf="project" class="card">
+    <mat-card-header>
+      <h2 class="section__title">{{ project.title }}</h2>
+    </mat-card-header>
+    <mat-card-content class="card__content-wrapper">
+      <app-image [name]="project.image"></app-image>
+    </mat-card-content>
+    <mat-card-actions class="button-wrapper">
+      <a
+        [href]="project.githubLink"
+        target="_blank"
+        title="Watch Code on Github"
+        class="button mat-mdc-mini-fab"
+      >
+        <app-icon width="40px" color="#69f0ae" name="githubIcon"></app-icon>
+      </a>
+      <a
+        [href]="project.link"
+        target="_blank"
+        title="Watch Live Demo"
+        mat-mini-fab
+        class="button"
+      >
+        <mat-icon class="grey-light">play_arrow</mat-icon>
+      </a>
+    </mat-card-actions>
+  </mat-card>
+</section>
