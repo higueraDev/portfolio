@@ -12,7 +12,7 @@ export class HomeComponent {
   public sectionActive: number = 0;
 
   get viewHeight() {
-    return window.visualViewport?.height || 0;
+    return (window.visualViewport?.height || 0) - 64;
   }
 
   get position() {
