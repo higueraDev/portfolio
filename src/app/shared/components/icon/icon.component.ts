@@ -30,29 +30,28 @@ interface Icon {
 export class IconComponent implements AfterViewInit {
   @Input() name: string = 'angularIcon';
   @Input() width: string = '20px';
-  @Input() color: string = "white";
+  @Input() color: string = 'white';
   @ViewChild('svg') svg!: ElementRef<HTMLElement>;
 
-
   private icons: Icon = {
-    angular: angularIcon ,
-    github: githubIcon ,
-    linkedin: linkedinIcon ,
-    twitter: twitterIcon ,
-    sass: sassIcon ,
-    html: htmlIcon ,
-    css: cssIcon ,
-    javascript: javascriptIcon ,
-    typescript: typescriptIcon ,
-    react: reactIcon ,
-    rust: rustIcon ,
-    vue: vueIcon
+    angular: angularIcon,
+    github: githubIcon,
+    linkedin: linkedinIcon,
+    twitter: twitterIcon,
+    sass: sassIcon,
+    html: htmlIcon,
+    css: cssIcon,
+    javascript: javascriptIcon,
+    typescript: typescriptIcon,
+    react: reactIcon,
+    rust: rustIcon,
+    vue: vueIcon,
   };
 
   ngAfterViewInit() {
-    this.svg.nativeElement.style.width = this.width
-    this.svg.nativeElement.style.height = this.width
-    this.svg.nativeElement.style.fill = this.color
+    this.svg.nativeElement.style.width = this.width;
+    this.svg.nativeElement.style.height = this.width;
+    this.svg.nativeElement.style.fill = this.color;
     this.svg.nativeElement.innerHTML = this.icons[this.name];
   }
 }
