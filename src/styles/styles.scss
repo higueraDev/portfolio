@@ -76,17 +76,13 @@ button[mat-raised-button] {
 
 .container {
   width: 100%;
-  height: calc(100% - 64px);
+  height: 100%;
   overflow: auto;
   scroll-snap-type: y mandatory;
   background-image: url("../assets/images/hero.jpeg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-
-  @media (max-width:599px) {
-    height: calc(100% - 56px);
-  }
 }
 
 .container__title {
@@ -167,7 +163,8 @@ mat-icon.scroll-icon {
   animation: pulse 0.5s steps(3) infinite;
 }
 
-.card {
+mat-card.card {
+  @extend .bg-blue-grey;
   padding: 20px;
   transition: transform 0.6s ease, opacity 0.7s ease;
   opacity: 0;
@@ -184,9 +181,12 @@ mat-icon.scroll-icon {
 
 
 mat-card-header.mat-mdc-card-header{
-  padding-left: 0;
-  padding-right: 0;
   flex-direction: column;
+
+  @media (max-width:767px) {
+    padding: 0;
+  }
+
   p{
     margin-top: 0;
   }
@@ -222,12 +222,16 @@ mat-card-header.mat-mdc-card-header{
   }
 }
 
-.card__content-wrapper {
+mat-card-content.card__content-wrapper {
   width: 100%;
   max-width: 800px;
+
+  @media (max-width:767px) {
+    padding: 0;
+  }
 }
 
-.button-wrapper {
+mat-card-actions.button-wrapper {
   padding-top: 20px;
   justify-content: center;
 }

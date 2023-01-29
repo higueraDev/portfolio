@@ -9,11 +9,6 @@
 
 .social {
   display: flex;
-  justify-content: space-between;
   position: relative;
   z-index: 1;
-
-  @media (min-width:768px) {
-    justify-content: flex-start;
-  }
 }
