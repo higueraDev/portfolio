@@ -31,8 +31,7 @@ p,
 li,
 a,
 a[mat-raised-button] span.mdc-button__label,
-button[mat-raised-button] span.mdc-button__label
- {
+button[mat-raised-button] span.mdc-button__label {
   font-size: 1rem;
   line-height: 1.5;
   @media (min-width: 1200px) {
@@ -41,7 +40,8 @@ button[mat-raised-button] span.mdc-button__label
   }
 }
 
-a[mat-raised-button], button[mat-raised-button] {
+a[mat-raised-button],
+button[mat-raised-button] {
   min-width: 100%;
   padding: 25px 0;
 
@@ -60,17 +60,17 @@ a[mat-raised-button], button[mat-raised-button] {
 
   /* Track */
   ::-webkit-scrollbar-track {
-    @extend .bg-grey
+    @extend .bg-grey;
   }
 
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    @extend .bg-green
+    @extend .bg-green;
   }
 
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    @extend .bg-purple
+    @extend .bg-purple;
   }
 }
 
@@ -97,7 +97,6 @@ a[mat-raised-button], button[mat-raised-button] {
     font-size: 5rem;
   }
 }
-
 
 .section {
   display: flex;
@@ -142,7 +141,17 @@ a[mat-raised-button], button[mat-raised-button] {
   }
 }
 
-.section__title--right{
+.section__subtitle {
+  @extend .green;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  @media (min-width: 1200px) {
+    font-size: 1.3rem;
+    line-height: 1.8;
+  }
+}
+
+.section__title--right {
   margin-left: auto;
 }
 
@@ -168,7 +177,17 @@ mat-icon.scroll-icon {
   }
 }
 
-.mat-icon.card__icon{
+
+mat-card-header.mat-mdc-card-header{
+  padding-left: 0;
+  padding-right: 0;
+  flex-direction: column;
+  p{
+    margin-top: 0;
+  }
+}
+
+.mat-icon.card__icon {
   width: auto;
   height: auto;
   font-size: 5rem;
@@ -182,31 +201,28 @@ mat-icon.scroll-icon {
   z-index: 1;
   top: 0;
 
-  &--right{
+  &--right {
     right: 0;
-    transform: translate(0,-50%);
+    transform: translate(0, -50%);
     @media (min-width: 1200px) {
-      transform: translate(50%,-50%);
+      transform: translate(50%, -50%);
     }
   }
-  &--left{
+  &--left {
     left: 0;
-    transform: translate(0,-50%);
+    transform: translate(0, -50%);
     @media (min-width: 1200px) {
-      transform: translate(-50%,-50%);
+      transform: translate(-50%, -50%);
     }
   }
 }
-
 
 .card__content-wrapper {
   width: 100%;
   max-width: 800px;
 }
 
-
-.button-wrapper{
+.button-wrapper {
   padding-top: 20px;
   justify-content: center;
 }
-

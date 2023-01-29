@@ -2,6 +2,9 @@
   <mat-card *ngIf="project" class="card">
     <mat-card-header>
       <h2 class="section__title">{{ project.title }}</h2>
+      <p class="section__subtitle">
+        <app-icon [matTooltip]="icon.toUpperCase()" matTooltipPosition="above" *ngFor="let icon of project.icons" width="30px" height="30px" color="#69f0ae" [name]="icon"></app-icon>
+      </p>
     </mat-card-header>
     <mat-card-content class="card__content-wrapper">
       <app-image [name]="project.image"></app-image>
@@ -13,7 +16,7 @@
         title="Watch Code on Github"
         class="button mat-mdc-mini-fab"
       >
-        <app-icon width="40px" color="#69f0ae" name="githubIcon"></app-icon>
+        <app-icon width="40px" color="#69f0ae" name="github"></app-icon>
       </a>
       <a
         [href]="project.link"

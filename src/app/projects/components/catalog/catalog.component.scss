@@ -1,12 +1,34 @@
 @import "../../../../styles/colors";
 
+.section__title{
+  @extend .grey;
+}
+
+.section__subtitle{
+  @extend .bg-grey;
+  display: flex;
+  padding: 6px 12px;
+
+  app-icon{
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+}
+
+.card{
+  background-color: white;
+}
+
 .button {
   border-radius: 50%;
   &:not(:last-child) {
     @extend .bg-grey-light;
     margin-right: 10px;
     &:hover {
-      opacity: 0.8;
+      app-icon{
+        opacity: 0.8;
+      }
     }
   }
   &:hover {
@@ -20,7 +42,7 @@
     position: absolute;
     transform: translate(50%, 50%);
     right: 50%;
-    bottom: 50%;
+    bottom: 35%;
   }
 }
 
@@ -35,7 +57,7 @@
       position: absolute;
       width: 100%;
       height: 100%;
-      background-color: rgba($color: #000, $alpha: 0.6);
+      background-color: rgba($color: #000, $alpha: 0.4);
     }
   }
 
