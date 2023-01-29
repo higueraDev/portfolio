@@ -44,7 +44,7 @@ export class ProjectsComponent {
   }
 
   get viewHeight() {
-    return window.visualViewport?.height || 0;
+    return (window.visualViewport?.height || 0) - 64;
   }
 
   get position() {

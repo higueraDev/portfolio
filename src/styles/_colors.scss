@@ -4,6 +4,7 @@ $grey-palette: mat.define-palette(mat.$grey-palette);
 $green-palette: mat.define-palette(mat.$green-palette);
 $purple-palette: mat.define-palette(mat.$purple-palette);
 $yellow-palette: mat.define-palette(mat.$yellow-palette);
+$blue-grey-palette: mat.define-palette(mat.$blue-grey-palette);
 
 .green{
   color: mat.get-color-from-palette($green-palette, A200);
@@ -23,6 +24,9 @@ $yellow-palette: mat.define-palette(mat.$yellow-palette);
 }
 .bg-grey{
   background-color: mat.get-color-from-palette($grey-palette, 900);
+}
+.bg-blue-grey{
+  background-color: mat.get-color-from-palette($blue-grey-palette, 900);
 }
 
 .purple{
