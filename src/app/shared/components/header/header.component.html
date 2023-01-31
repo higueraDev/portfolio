@@ -1,9 +1,9 @@
 <mat-toolbar color="primary" class="header">
   <div class="wrapper">
-    <button aria-label="Button to Open Menu" mat-mini-fab class="code-icon green" (click)="onMenuClick()">
+    <button aria-label="Button to Open Menu" matTooltip="Toggle Menu" mat-mini-fab class="code-icon green" (click)="onMenuClick()">
       <mat-icon>code</mat-icon>
     </button>
-    <a routerLink="/home" aria-label="Link to Go Homepage"><span class="title">higueraDev</span></a>
+    <a routerLink="/home" aria-label="Link to Go Homepage" matTooltip="Go Home"><span class="title">higueraDev</span></a>
     <div class="cta-wrap">
       <div class="love-wrapper">
         <span>{{likes}}</span>
