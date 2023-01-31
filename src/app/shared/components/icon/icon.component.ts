@@ -28,7 +28,7 @@ interface Icon {
   styleUrls: ['./icon.component.scss'],
 })
 export class IconComponent implements AfterViewInit {
-  @Input() name: string = 'angularIcon';
+  @Input() name: string = 'angular';
   @Input() width: string = '20px';
   @Input() color: string = 'white';
   @ViewChild('svg') svg!: ElementRef<HTMLElement>;

@@ -14,4 +14,8 @@ export class ImageComponent {
     return 'assets/images/' + this.name + '.jpeg'
   }
 
+  get alt(){
+    return this.name.replace('_',' ').toUpperCase()
+  }
+
 }

@@ -1,15 +1,34 @@
 <mat-sidenav-container class="sidenav" hasBackdrop>
   <mat-sidenav #sidenav mode="over" class="menu bg-grey">
-    <button routerLink="/home" class="link" routerLinkActive="active">
+    <button
+      aria-label="Link to Homepage"
+      routerLink="/home"
+      class="link"
+      routerLinkActive="active"
+    >
       <mat-icon class="icon green">home</mat-icon> Home
     </button>
-    <button routerLink="/projects" class="link" routerLinkActive="active">
+    <button
+      aria-label="Link to Projects Page"
+      routerLink="/projects"
+      class="link"
+      routerLinkActive="active"
+    >
       <mat-icon class="icon green">folder</mat-icon> Projects
     </button>
-    <button routerLink="/about" class="link" routerLinkActive="active">
+    <button
+      aria-label="Link to About Page"
+      routerLink="/about"
+      class="link"
+      routerLinkActive="active"
+    >
       <mat-icon class="icon green">person_search</mat-icon> About
     </button>
-    <a class="link" href="mailto:contact@higueradev.com" title="Send a Mail"
+    <a
+      aria-label="Link to Send an Email"
+      class="link"
+      href="mailto:contact@higueradev.com"
+      title="Send a Mail"
       ><mat-icon class="icon green">email</mat-icon> Contact</a
     >
     <hr class="separator" />
@@ -20,10 +39,11 @@
     <div class="cta-wrapper">
       <p>Resume:</p>
       <a
-      href="assets/files/Perez_Higuera_Manuel_David.pdf"
-      target="_blank"
-      matTooltip="Download Resume PDF"
-      ><mat-icon class="resume">picture_as_pdf</mat-icon></a
+        href="assets/files/Perez_Higuera_Manuel_David.pdf"
+        target="_blank"
+        matTooltip="Download Resume PDF"
+        aria-label="Button to Download Resume in PDF"
+        ><mat-icon class="resume">picture_as_pdf</mat-icon></a
       >
     </div>
   </mat-sidenav>
