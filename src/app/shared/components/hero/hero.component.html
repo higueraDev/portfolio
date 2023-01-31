@@ -1,6 +1,14 @@
 <section class="hero section section--light">
   <app-image name="profile" class="profile-image"></app-image>
-  <h1 class="container__title title">hello world</h1>
+  <h1
+    class="container__title"
+    [ngStyle]="{
+      'width.ch': titleLength,
+      animation: 'typing 1s steps(' + titleLength + ')'
+    }"
+  >
+    {{ newTitle }}
+  </h1>
   <mat-icon (click)="onScroll()" class="green scroll-icon"
     >expand_more</mat-icon
   >
