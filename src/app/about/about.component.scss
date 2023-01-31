@@ -1,0 +1,19 @@
+.image-wrapper{
+  display: flex;
+  overflow: hidden;
+  app-image{
+    width: 50%;
+  }
+}
+
+.card__content-wrapper{
+  padding: 10px;
+
+  @media (min-width:768px) {
+    padding: 16px;
+  }
+
+  p{
+    margin: 0;
+  }
+}

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LayoutComponent } from './layout/layout.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
   {
@@ -22,7 +23,16 @@ const routes: Routes = [
         loadChildren: () =>
           import('./projects/projects.module').then((m) => m.ProjectsModule),
       },
+      {
+        path: 'about',
+        loadChildren: () =>
+          import('./about/about.module').then((m) => m.AboutModule),
+      },
     ],
+  },
+  {
+    path: '**',
+    component: PageNotFoundComponent
   },
 ];
 

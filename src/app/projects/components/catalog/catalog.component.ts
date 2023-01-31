@@ -8,4 +8,5 @@ import { Project } from '../../../models/entities/project';
 })
 export class CatalogComponent {
   @Input() project: Project | null = null;
+  @Input() sectionColor: string = '';
 }

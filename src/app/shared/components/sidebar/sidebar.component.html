@@ -13,8 +13,19 @@
       ><mat-icon class="icon green">email</mat-icon> Contact</a
     >
     <hr class="separator" />
-    <p>Follow me:</p>
-    <app-social></app-social>
+    <div class="cta-wrapper">
+      <p>Follow me:</p>
+      <app-social></app-social>
+    </div>
+    <div class="cta-wrapper">
+      <p>Resume:</p>
+      <a
+      href="assets/files/Perez_Higuera_Manuel_David.pdf"
+      target="_blank"
+      matTooltip="Download Resume PDF"
+      ><mat-icon class="resume">picture_as_pdf</mat-icon></a
+      >
+    </div>
   </mat-sidenav>
   <mat-sidenav-content classs="content">
     <ng-content></ng-content>

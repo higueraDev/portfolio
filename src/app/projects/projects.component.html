@@ -1,8 +1,10 @@
 <main #main (scroll)="onScroll()" class="container">
+  <app-hero title="Projects" (scroll)="scroll()"></app-hero>
   <app-catalog
+    [sectionColor]="i % 2 !== 0 ? 'section--light' : 'section--dark'"
     *ngFor="let project of projects; index as i"
     [project]="project"
-    [class.active]="(sectionActive > (i - 0.1)) && (sectionActive < ((i + 1 ) - 0.1))"
+    [class.active]="sectionActive > i + 1 - 0.2 && sectionActive < i + 2 - 0.5"
   ></app-catalog>
   <app-footer></app-footer>
 </main>

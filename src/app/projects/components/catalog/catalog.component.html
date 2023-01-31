@@ -1,4 +1,4 @@
-<section class="section section--dark">
+<section class="section" [ngClass]="sectionColor">
   <mat-card *ngIf="project" class="card">
     <mat-card-header>
       <h2 class="section__title">{{ project.title }}</h2>
@@ -7,13 +7,13 @@
       </p>
     </mat-card-header>
     <mat-card-content class="card__content-wrapper">
-      <app-image [name]="project.image"></app-image>
+      <app-image [name]="project.image" height="auto"></app-image>
     </mat-card-content>
     <mat-card-actions class="button-wrapper">
       <a
         [href]="project.githubLink"
         target="_blank"
-        title="Watch Code on Github"
+        matTooltip="Watch Code on Github"
         class="button mat-mdc-mini-fab"
       >
         <app-icon width="40px" color="#69f0ae" name="github"></app-icon>
@@ -21,7 +21,7 @@
       <a
         [href]="project.link"
         target="_blank"
-        title="Watch Live Demo"
+        matTooltip="Watch Live Demo"
         mat-mini-fab
         class="button"
       >

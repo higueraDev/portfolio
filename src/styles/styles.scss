@@ -170,6 +170,7 @@ mat-card.card {
   opacity: 0;
   transform: translateY(25%);
   max-height: 90%;
+  max-width: 900px;
 }
 
 .active {
@@ -197,7 +198,7 @@ mat-card-header.mat-mdc-card-header{
   height: auto;
   font-size: 5rem;
   @media (min-width: 1200px) {
-    font-size: 10rem;
+    font-size: 8rem;
   }
 }
 
@@ -210,22 +211,21 @@ mat-card-header.mat-mdc-card-header{
     right: 0;
     transform: translate(0, -50%);
     @media (min-width: 1200px) {
-      transform: translate(50%, -50%);
+      transform: translate(50%, -25%);
     }
   }
   &--left {
     left: 0;
     transform: translate(0, -50%);
     @media (min-width: 1200px) {
-      transform: translate(-50%, -50%);
+      transform: translate(-50%, -25%);
     }
   }
 }
 
 mat-card-content.card__content-wrapper {
-  width: 100%;
-  max-width: 800px;
-
+  padding-right: 16px;
+  overflow: hidden;
   @media (max-width:767px) {
     padding: 0;
   }

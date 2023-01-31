@@ -18,7 +18,6 @@ export class ProjectsComponent {
     this.projects = [
       {
         title: 'Rick & Morty',
-        subtitle: 'Javascript Vanilla',
         githubLink: 'https://github.com/higueraDev/skill-test',
         link: 'https://higueradev.github.io/skill-test/',
         image: 'rick_and_morty',
@@ -26,7 +25,6 @@ export class ProjectsComponent {
       },
       {
         title: 'Star Wars',
-        subtitle: 'Angular',
         githubLink: 'https://github.com/higueraDev/starwars-wiki',
         link: 'https://angular-store-22e59.web.app/',
         image: 'star_wars',
@@ -34,11 +32,17 @@ export class ProjectsComponent {
       },
       {
         title: 'Map Directions',
-        subtitle: 'Vue 3',
         githubLink: 'https://github.com/higueraDev/vue-map',
         link: 'https://mapbox-sample.netlify.app/#/',
         image: 'map_directions',
         icons: [Icon.VUE, Icon.TS, Icon.JS, Icon.HTML,]
+      },
+      {
+        title: 'Who Is That Pokemon Game',
+        githubLink: 'https://github.com/higueraDev/pokemon-game',
+        link: 'https://master--wichpokemon.netlify.app',
+        image: 'pokemon_game',
+        icons: [Icon.VUE, Icon.JS,Icon.CSS,Icon.HTML,]
       },
     ];
   }
@@ -49,6 +53,14 @@ export class ProjectsComponent {
 
   get position() {
     return this.main?.nativeElement.scrollTop || 0;
+  }
+
+  scroll() {
+    this.main.nativeElement.scrollTo({
+      top: this.viewHeight,
+      left: 0,
+      behavior: 'smooth',
+    });
   }
 
   onScroll() {

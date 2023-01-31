@@ -8,6 +8,8 @@ import { IconComponent } from './components/icon/icon.component';
 import { RouterModule } from '@angular/router';
 import { SocialComponent } from './components/social/social.component';
 import { ImageComponent } from './components/image/image.component';
+import { LogoComponent } from './components/logo/logo.component';
+import { HeroComponent } from './components/hero/hero.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,8 @@ import { ImageComponent } from './components/image/image.component';
     IconComponent,
     SocialComponent,
     ImageComponent,
+    LogoComponent,
+    HeroComponent
   ],
   imports: [CommonModule, MaterialModule, RouterModule],
   exports: [
@@ -25,6 +29,8 @@ import { ImageComponent } from './components/image/image.component';
     FooterComponent,
     ImageComponent,
     IconComponent,
+    LogoComponent,
+    HeroComponent
   ],
 })
 export class SharedModule {}

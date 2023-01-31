@@ -7,6 +7,8 @@ import { Component, Input } from '@angular/core';
 })
 export class ImageComponent {
   @Input()name: string = ''
+  @Input()width: string = '100%'
+  @Input()height: string = '100%'
 
   get localSource(){
     return 'assets/images/' + this.name + '.jpeg'

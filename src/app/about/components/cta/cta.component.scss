@@ -1,0 +1,30 @@
+.banner__text{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba($color: #7B1FA2, $alpha: 0.8);
+  padding: 0 3px;
+}
+
+.banner{
+  position: relative;
+  overflow: hidden;
+}
+
+.button-wrapper{
+  flex-direction: column;
+  @media (min-width:768px) {
+    flex-direction: row;
+  }
+}
+
+.mr-16{
+  margin-bottom: 16px;
+  @media (min-width:768px) {
+    margin-bottom: 0;
+    margin-right: 16px;
+  }
+}

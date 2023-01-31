@@ -30,10 +30,10 @@ $blue-grey-palette: mat.define-palette(mat.$blue-grey-palette);
 }
 
 .purple{
-  color: mat.get-color-from-palette($purple-palette, 500);
+  color: mat.get-color-from-palette($purple-palette, 700);
 }
 .bg-purple{
-  background-color: mat.get-color-from-palette($purple-palette, 500);
+  background-color: mat.get-color-from-palette($purple-palette, 700);
 }
 
 .yellow{

@@ -1,27 +1,27 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HomeComponent } from './home.component';
-import { HomeRoutingModule } from './home-routing.module';
-import { MaterialModule } from '../material/material.module';
-import { SharedModule } from '../shared/shared.module';
-import { WelcomeComponent } from './components/welcome/welcome.component';
-import { IntroductionComponent } from './components/introduction/introduction.component';
-import { CtaComponent } from './components/cta/cta.component';
 
+import { AboutRoutingModule } from './about-routing.module';
+import { AboutComponent } from './about.component';
+import { SharedModule } from '../shared/shared.module';
+import { MaterialModule } from '../material/material.module';
+import { IntroductionComponent } from './components/introduction/introduction.component';
+import { WelcomeComponent } from './components/welcome/welcome.component';
+import { CtaComponent } from './components/cta/cta.component';
 
 
 @NgModule({
   declarations: [
-    HomeComponent,
+    AboutComponent,
     WelcomeComponent,
     IntroductionComponent,
-    CtaComponent,
+    CtaComponent
   ],
   imports: [
     CommonModule,
-    HomeRoutingModule,
-    MaterialModule,
+    AboutRoutingModule,
     SharedModule,
+    MaterialModule
   ]
 })
-export class HomeModule { }
+export class AboutModule { }
