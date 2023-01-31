@@ -17,6 +17,10 @@ export class SidebarComponent {
     this.sidenav.toggle();
   }
 
+  close() {
+    this.sidenav.close();
+  }
+
   changeColor(){
     this.iconColor = '#000000'
   }
