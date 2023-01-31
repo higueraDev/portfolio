@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { tap } from 'rxjs';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
@@ -10,14 +10,14 @@ export class UserInteractionsService {
 
   postLike(likes: number) {
     return this.http
-      .patch('https://portfolio-a9c2c-default-rtdb.firebaseio.com/.json', {
+      .patch(environment.apiURL + '/.json', {
         likes,
       })
   }
 
   getLikes() {
     return this.http.get<number>(
-      'https://portfolio-a9c2c-default-rtdb.firebaseio.com/likes.json'
+      environment.apiURL + '/likes.json'
     );
   }
 }
