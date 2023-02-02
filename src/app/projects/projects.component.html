@@ -2,14 +2,18 @@
   <app-hero title="Projects" (scroll)="scroll()"></app-hero>
   <app-catalog
     [sectionColor]="i % 2 !== 0 ? 'section--light' : 'section--dark'"
-    *ngFor="let project of projects; index as i"
+    *ngFor="let project of project$ | async; index as i"
     [project]="project"
-    [class.active]="sectionActive > i + 1 - 0.2 && sectionActive < i + 2 - 0.5"
+    [class.active]="
+      sectionActive > i + 1 - 0.2 && sectionActive < i + 2 - 0.5
+    "
   ></app-catalog>
-  <div class="section section--dark" *ngIf="projects.length < 1">
-    <h2>Oops!... I have some problems in the backend</h2>
-    <p>Please try again later.</p>
-    <app-logo width="100px"></app-logo>
-  </div>
+  <ng-template *ngIf="(project$ | async)?.length === 0">
+    <div class="section section--dark">
+      <h2>Oops!... I have some problems in the backend</h2>
+      <p>Please try again later.</p>
+      <app-logo width="100px"></app-logo>
+    </div>
+  </ng-template>
   <app-footer></app-footer>
 </main>

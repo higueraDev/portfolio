@@ -1,4 +1,5 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
+import { takeUntil, Observable } from 'rxjs';
 import { Project } from '../models/entities/project';
 import { ProjectsService } from '../services/projects.service';
 
@@ -11,14 +12,12 @@ export class ProjectsComponent {
   @ViewChild('main') main!: ElementRef<HTMLElement>;
 
   public sectionActive: number = 0;
-  public projects: Project[] = [];
+  public project$: Observable<Project[]>;
 
   constructor(private projectsService: ProjectsService) {}
 
   ngOnInit() {
-    this.projectsService.getProjects().subscribe((data) => {
-      this.projects = data;
-    });
+    this.project$ = this.projectsService.getProjects()
   }
 
   get viewHeight() {
