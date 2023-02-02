@@ -1,23 +1,26 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { environment } from '../../environments/environment';
+import { doc, docData, Firestore, updateDoc } from '@angular/fire/firestore';
+import { Like } from '../models/entities/like';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class UserInteractionsService {
-  constructor(private http: HttpClient) {}
-
-  postLike(likes: number) {
-    return this.http
-      .patch(environment.apiURL + '/.json', {
-        likes,
-      })
-  }
+  constructor(private readonly firestore: Firestore) {}
 
   getLikes() {
-    return this.http.get<number>(
-      environment.apiURL + '/likes.json'
+    const likesDocumentReference = doc(this.firestore, 'likes/likesId');
+    return docData(likesDocumentReference, {
+      idField: 'id',
+    }) as Observable<Like>;
+  }
+
+  postLike(likes: number) {
+    const likesDocumentReference = doc(
+      this.firestore,
+      `likes/likesId`
     );
+    return updateDoc(likesDocumentReference, { count: likes });
   }
 }
