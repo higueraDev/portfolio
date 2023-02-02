@@ -8,7 +8,7 @@ export const environment = {
     apiKey: 'AIzaSyBptfSSKvjf6sHed-lcLQWQgVj1e6EQb2I',
     authDomain: 'portfolio-a9c2c.firebaseapp.com',
     messagingSenderId: '300556222607',
+    measurementId: 'G-GZGGGTKEJ3'
   },
   production: true,
-  apiURL: 'https://portfolio-a9c2c-default-rtdb.firebaseio.com'
 };
