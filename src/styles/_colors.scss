@@ -12,6 +12,9 @@ $blue-grey-palette: mat.define-palette(mat.$blue-grey-palette);
 .bg-green{
   background-color: mat.get-color-from-palette($green-palette, A200);
 }
+.outline-green{
+  outline: 1px solid mat.get-color-from-palette($green-palette, A200);
+}
 
 .grey{
   color: mat.get-color-from-palette($grey-palette, 900);
@@ -38,4 +41,8 @@ $blue-grey-palette: mat.define-palette(mat.$blue-grey-palette);
 
 .yellow{
   color: mat.get-color-from-palette($yellow-palette, A200);
+}
+.outline-yellow{
+  outline: 0.5px solid mat.get-color-from-palette($yellow-palette, A200);
+  outline-offset: -1px;
 }

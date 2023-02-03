@@ -5,6 +5,7 @@
 
 html {
   scroll-behavior: smooth;
+  cursor: url('../assets/images/cursor.png'),default;
 }
 
 html,
@@ -15,6 +16,10 @@ body,
 button {
   margin: 0;
   font-family: "Roboto Mono", "Helvetica Neue", sans-serif;
+}
+
+a,button{
+  cursor: url('../assets/images/pointer.png'),pointer !important;
 }
 
 a {
@@ -71,6 +76,10 @@ button[mat-raised-button] {
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
     @extend .bg-purple;
+  }
+
+  &:focus{
+    @extend .outline-yellow;
   }
 }
 
@@ -159,8 +168,8 @@ mat-icon.scroll-icon {
   width: auto;
   height: auto;
   font-size: 4rem;
-  cursor: pointer;
   animation: pulse 0.5s steps(3) infinite;
+  cursor: url('../assets/images/pointer.png'),pointer;
 }
 
 mat-card.card {

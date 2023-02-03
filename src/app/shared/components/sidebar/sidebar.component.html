@@ -1,10 +1,10 @@
 <mat-sidenav-container class="sidenav" hasBackdrop>
-  <mat-sidenav #sidenav mode="over" class="menu bg-grey">
+  <mat-sidenav (closed)="setMenuClosed()" #sidenav mode="over" class="menu bg-grey">
     <button
       aria-label="Link to Homepage"
       routerLink="/home"
       class="link"
-      routerLinkActive="active"
+      routerLinkActive="link--active"
     >
       <mat-icon class="icon green">home</mat-icon> Home
     </button>
@@ -12,7 +12,7 @@
       aria-label="Link to Projects Page"
       routerLink="/projects"
       class="link"
-      routerLinkActive="active"
+      routerLinkActive="link--active"
     >
       <mat-icon class="icon green">folder</mat-icon> Projects
     </button>
@@ -20,7 +20,7 @@
       aria-label="Link to About Page"
       routerLink="/about"
       class="link"
-      routerLinkActive="active"
+      routerLinkActive="link--active"
     >
       <mat-icon class="icon green">person_search</mat-icon> About
     </button>

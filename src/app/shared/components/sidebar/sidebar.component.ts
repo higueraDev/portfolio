@@ -1,5 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
+import { StoreService } from '../../../services/store.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -13,12 +14,21 @@ export class SidebarComponent {
 
   public logo: string = './assets/images/higo.png';
 
+  constructor(private readonly store: StoreService) {}
+
+  setMenuClosed() {
+    this.store.setMenuState(false);
+  }
+
   toggle() {
     this.sidenav.toggle();
   }
 
   close() {
-    if (this.sidenav) this.sidenav.close();
+    if (this.sidenav) {
+      this.sidenav.close();
+      this.setMenuClosed()
+    }
   }
 
   changeColor() {

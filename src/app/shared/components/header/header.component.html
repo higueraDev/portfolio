@@ -3,8 +3,7 @@
     <button
       aria-label="Button to Open Menu"
       matTooltip="Toggle Menu"
-      mat-mini-fab
-      class="code-icon green"
+      class="menu-button green"
       (click)="onMenuClick()"
     >
       <ng-template #codeIcon>
@@ -13,13 +12,14 @@
       <mat-icon *ngIf="!(menuOpened$ | async) else codeIcon">menu</mat-icon>
     </button>
     <a routerLink="/home" aria-label="Link to Go Homepage" matTooltip="Go Home"
-      ><span class="title">higueraDev</span></a
+      ><app-logo class="logo" width="20px"></app-logo><span class="title">higueraDev</span></a
     >
     <div class="cta-wrap">
       <div class="love-wrapper">
         <span>{{ (like$ | async)?.count }}</span>
         <button
           aria-label="Button to Give a Like on this Site"
+          matTooltip="Give a Like"
           matRipple
           matRippleColor="rgba(255,255,0,.5)"
           [matRippleCentered]="true"
@@ -27,7 +27,7 @@
           (click)="onLike()"
           mat-icon-button
         >
-          <mat-icon color="accent" class="love-icon">favorite</mat-icon>
+          <mat-icon color="accent" class="love-icon" >favorite</mat-icon>
         </button>
       </div>
     </div>
