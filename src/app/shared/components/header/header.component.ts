@@ -11,6 +11,7 @@ import { UserInteractionsService } from '../../../services/user-interactions.ser
 export class HeaderComponent implements OnInit {
   @Output() toggleMenu = new EventEmitter<string>();
   public like$: Observable<Like>;
+  public menuOpened: boolean = false
 
   constructor(private userInteraction: UserInteractionsService) {}
 
@@ -19,6 +20,7 @@ export class HeaderComponent implements OnInit {
   }
 
   onMenuClick() {
+    this.menuOpened = !this.menuOpened
     this.toggleMenu.emit('toggleMenu');
   }
 

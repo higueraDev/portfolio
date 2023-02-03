@@ -7,7 +7,10 @@
       class="code-icon green"
       (click)="onMenuClick()"
     >
-      <mat-icon>code</mat-icon>
+      <ng-template #codeIcon>
+        <mat-icon >code</mat-icon>
+      </ng-template>
+      <mat-icon *ngIf="!menuOpened else codeIcon">menu</mat-icon>
     </button>
     <a routerLink="/home" aria-label="Link to Go Homepage" matTooltip="Go Home"
       ><span class="title">higueraDev</span></a
