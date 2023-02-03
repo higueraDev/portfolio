@@ -1,3 +1,6 @@
 <div [ngStyle]="{ width: width, height: height }">
-  <img class="image" [src]="localSource" [alt]="alt" />
+  <picture>
+    <source [srcset]="desktopSource" media="(min-width: 768px)" />
+    <img class="image" [src]="localSource" [alt]="alt" />
+  </picture>
 </div>

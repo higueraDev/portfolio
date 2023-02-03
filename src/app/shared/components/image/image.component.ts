@@ -11,6 +11,10 @@ export class ImageComponent {
   @Input()height: string = '100%'
 
   get localSource(){
+    return 'assets/images/' + this.name + '_xs.jpg'
+  }
+
+  get desktopSource(){
     return 'assets/images/' + this.name + '.jpeg'
   }
 
