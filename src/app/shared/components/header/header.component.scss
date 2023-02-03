@@ -28,18 +28,14 @@
 
 .menu-button {
   @extend .bg-grey;
-  @extend .outline-green;
+  @extend .border-green;
   margin: 0 5px;
   position: fixed;
   bottom: 10px;
   right: 10px;
-  border: none;
   border-radius: 50%;
-  width: 3rem;
-  height: 3rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 3.2rem;
+  height: 3.2rem;
 
   @media (min-width:1200px) {
     width: 2.6rem;
@@ -50,6 +46,9 @@
   }
 
   .mat-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: auto;
     height: auto;
     font-size:2rem;
@@ -79,7 +78,7 @@
   animation: pulse 0.5s steps(3) infinite;
 }
 
-.love-wrapper{
+:is(.love-wrapper,.logo-link,.logo){
   display: flex;
   align-items: center;
 }
