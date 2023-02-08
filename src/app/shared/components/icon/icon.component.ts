@@ -10,6 +10,7 @@ import { typescriptIcon } from './svgs/typescriptIcon';
 import { reactIcon } from './svgs/reactIcon';
 import { rustIcon } from './svgs/rustIcon';
 import { vueIcon } from './svgs/vueIcon';
+import { instagramIcon } from './svgs/instagramIcon';
 import {
   Component,
   ElementRef,
@@ -46,6 +47,7 @@ export class IconComponent implements AfterViewInit {
     react: reactIcon,
     rust: rustIcon,
     vue: vueIcon,
+    instagram: instagramIcon
   };
 
   ngAfterViewInit() {
