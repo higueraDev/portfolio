@@ -1,5 +1,5 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
-import { takeUntil, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 import { Project } from '../models/entities/project';
 import { ProjectsService } from '../services/projects.service';
 
@@ -17,7 +17,7 @@ export class ProjectsComponent {
   constructor(private projectsService: ProjectsService) {}
 
   ngOnInit() {
-    this.project$ = this.projectsService.getProjects()
+    this.project$ = this.projectsService.getProjects();
   }
 
   get viewHeight() {
